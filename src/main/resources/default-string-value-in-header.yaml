@@ -1,0 +1,17 @@
+swagger: "2.0"
+info:
+  title: Too many quotes
+  version: "1.0.0"
+  description: Two sets of quotes are generated in annotations of PetApi#addPet around default value of string header `@ApiParam(value = "" , defaultValue=""string"")`
+paths:
+  /pet:
+    get:
+      operationId: addPet
+      parameters:
+      - in: header
+        name: with-default
+        type: string
+        default: string
+      responses:
+        200:
+          description: "Success"
